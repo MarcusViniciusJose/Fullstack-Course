@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Operadora</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Minutos consumidos</h1>
+
+            <label for="txt1">Minutos consumidos:</label>
+            
+            <input type="number" id="min">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            let minCons = parseFloat(document.getElementById("min").value);
+            const minPlano = 100;
+            const valorPlano = 50;
+            const valorMinExcedente = 2;
+            let valorTotal;
+            
+
+            if(minCons > minPlano){
+                let minExcedentes = minCons - minPlano;
+
+                let valorExcedente = minExcedentes * valorMinExcedente;
+
+                valorTotal = valorPlano + valorExcedente
+
+            }else{
+                valorTotal = valorPlano
+            }
+            
+            alert("O valor da sua fatura sera de R$" + valorTotal.toFixed(2).replace('.', ','));
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Troco</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Troco</h1>
+
+            <label for="txt1">Digite o preço do produto: R$</label>
+            
+            <input type="number" id="precoPrd">
+
+            <label for="txt1">Digite a quantidade de unidades compradas:</label>
+            
+            <input type="number" id="unid">
+
+            <label for="txt1">Digite o valor dado pelo cliente: R$</label>
+            
+            <input type="number" id="valorCli">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            let precoProduto = parseFloat(document.getElementById("precoPrd").value);
+
+            let unidComprada = parseFloat(document.getElementById("unid").value);
+
+            let valorCliente = parseFloat(document.getElementById("valorCli").value);
+
+            let valorTotal = precoProduto * unidComprada;
+
+            let troco = valorCliente - valorTotal;
+
+            alert("O troco do cliente é de R$" + troco)
+
+        }
+
+    </script>
+
+</body>
+</html>
