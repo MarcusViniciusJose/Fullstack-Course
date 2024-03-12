@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Números inteiros</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Números inteiros</h1>
+
+            <label for="txt1">Digite o primeiro número:</label>
+            
+            <input type="number" id="txt1">
+
+            <label for="txt2">Digite o segundo número:</label>
+            
+            <input type="number" id="txt2">
+
+            <label for="txt3">Digite o terceiro número:</label>
+            
+            <input type="number" id="txt3">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            numero1 = parseInt(document.getElementById("txt1").value);
+            
+            numero2 = parseInt(document.getElementById("txt2").value);
+            
+            numero3 = parseInt(document.getElementById("txt3").value);
+
+
+            if(numero1 < numero2 && numero1 < numero3){
+                alert("O menor numero é o " + numero1);
+            }else if(numero2 < numero1 && numero2 < numero3){
+                alert("O menor numero é o " + numero2);
+            }else if(numero3 < numero1 && numero3 < numero2){
+                alert("O menor numero é o " + numero3);
+            }
+
+
+        }
+
+    </script>
+
+</body>
+</html>
