@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Nota</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Nota</h1>
+
+            <label for="txt1">Digite a primeira nota:</label>
+            
+            <input type="number" id="txt1">
+
+            <label for="txt2">Digite a segunda nota:</label>
+            
+            <input type="number" id="txt2">
+
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            nota1 = parseInt(document.getElementById("txt1").value);
+            
+            nota2 = parseInt(document.getElementById("txt2").value);
+            
+            let media = (nota1 + nota2)/2
+
+            if(media >= 7){
+                alert("APROVADO COM A MEDIA: " + media);
+            }else{
+                alert("REPROVADO COM A MEDIA: " + media)
+            }
+
+
+        }
+
+    </script>
+
+</body>
+</html>
