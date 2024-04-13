@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Impar</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Exibir impar</h1>
+
+            <label for="txt1">Insira um numero qualquer:</label>
+            
+            <input type="text" id="num1">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+        function botao_click() {
+
+            let valor = parseInt(document.getElementById("num1").value);
+
+
+            let mensagem = "Os numero impares são: \r";
+            for(let i = 1; i <= valor; i++){
+
+                let resto = i % 2;
+
+                let impar = resto;
+
+                if(impar > 0){
+
+                    mensagem += i + "\r";
+
+                    
+
+                }
+
+            }
+
+            alert(mensagem);
+        
+        }
+
+    </script>
+
+</body>
+</html
